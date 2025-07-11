@@ -18,5 +18,11 @@ export const saveContact =(req:Request,res:Response)=>{
     }
 }
 export const getAllContacts = (req:Request,res:Response)=>{
-
+    try {
+        const contacts = contactService.getAllContacts();
+        res.status(200).json(contacts);
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({error:"Something went wrong"});
+    }
 }
