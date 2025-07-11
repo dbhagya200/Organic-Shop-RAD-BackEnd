@@ -1,4 +1,6 @@
 
-export interface ContactModel{
-
+export interface Contact{
+    name:string;
+    email:string;
+    message:string
 }
