@@ -22,7 +22,7 @@ const corsOptions = {
         }
     }
 }
-/*app.use(cors()); // Enable/Allow CORS anyone can*/
+app.use(cors()); // Enable/Allow CORS anyone can
 app.use("/api/products",productRoutes);
 app.use("/api/contact",contactRoutes)
 
