@@ -1,5 +1,6 @@
 import express, {Express,Request,Response} from "express";
 import productRoutes from "./routes/product.routes";
+import contactRoutes from "./routes/contact.routes";
 import cors from "cors";
 
 // 1.initialize the express app
@@ -23,6 +24,7 @@ const corsOptions = {
 }
 /*app.use(cors()); // Enable/Allow CORS anyone can*/
 app.use("/api/products",productRoutes);
+app.use("/api/contact",contactRoutes)
 
 
 /*
